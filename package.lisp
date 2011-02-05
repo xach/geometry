@@ -20,6 +20,7 @@
            #:point-box
            #:origin-box
            #:bounding-box
+           #:bounding-box-delegate
            #:displace
            #:transpose
            #:xmin #:ymin #:xmax #:ymax

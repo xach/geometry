@@ -147,7 +147,13 @@
   (point-box (scale (minpoint box) scaler)
              (scale (maxpoint box) scaler)))
 
+(defgeneric bounding-box-delegate (object)
+  (:documentation
+   "An object that provides the bounding box for some other object."))
+
 (defgeneric bounding-box (object)
+  (:method (object)
+    (bounding-box (bounding-box-delegate object)))
   (:method ((box box))
     box)
   (:method ((point point))
