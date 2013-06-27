@@ -40,8 +40,6 @@
     (and (= (x a) (x b))
          (= (y a) (y b)))))
 
-(defgeneric add/2 (a b))
-
 (defgeneric add (a b &rest args)
   (:method (a b &rest args)
     (if args
